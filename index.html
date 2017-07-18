@@ -23,6 +23,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#myPage">Logo</a>
       </div>
@@ -34,7 +35,19 @@
           <li><a href="#parents">PARENTS CORNER</a></li>
           <li><a href="#prcb">REQUEST CALL BACK</a></li>
           <li><a href="#contact">CONTACT</a></li>
-        </ul>
+          <li class ="dropdown">
+            <a class = "dropdown-toggle" data-toggle="dropdown" href ="#">
+              <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+          <li><a id="sign-up-btn" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a id="login-btn" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a id="changePassword-btn" href="#"><span class="glyphicon glyphicon-log-in"></span> change-password</a></li>
+          <li><a id="sign-out-btn" href="#"><span class="glyphicon glyphicon-user"></span> Sign-out</a></li>
+                        </ul>
+                      </li>
+                      <!-- <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li> -->
+                    </ul>
+
       </div>
     </div>
   </nav>
@@ -42,18 +55,73 @@
   <div class="jumbotron text-center image1">
     <h1>THE GREAT MASTERS</h1>
     <p>WE MAKE YOUR CHILD GROW AS OUR OWN</p>
-    <form>
+    <!-- <form>
       <div class="input-group">
 
         <div class="input-group-btn">
           <button type="button" class="btn btn-danger">Subscribe</button>
         </div>
       </div>
-    </form>
-  </div>
+    </form> -->
 
-  <!-- Container (About Section) -->
-  <!-- <div id="about" class="container-fluid">
+    <!--sign-up form -->
+    <div class="container add col-sm-4">
+      <!-- <div class="row">
+      <div class="col-md-4">
+      </div> -->
+      <div class="form">
+    <form id="sign-up" >
+            <h2>Signup</h2>
+            <div class="form-group">
+              <label for="email">Email address:</label>
+              <input type="email" name="credentials[email]" class="form-control" id="email">
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" name="credentials[password]" class="form-control" id="pwd">
+            </div>
+            <div class="form-group">
+              <label for="pwd">ConfirmPassword:</label>
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="pwd">
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+          </form>
+          <!--sign-in form-->
+          <form id="sign-in">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" name="credentials[email]" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" name="credentials[password]" class="form-control" id="pwd">
+        </div>
+        <div>
+            <label for="role">sign-in-Role</label>
+          <input type="radio" name="credentials[role]" value="administrator" checked>Administrator<br>
+          <input type="radio" name="credentials[role]" value="teacher"> Teacher<br>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" class="sin">Login</button>
+      </form>
+<!--changepassword form-->
+<form id="change-password">
+          <h2>CHANGE PASSWORD</h2>
+          <div class="form-group">
+            <label for="pwd"> Old-Password:</label>
+            <input type="password" name="passwords[old]" class="form-control" id="pwd">
+          </div>
+          <div class="form-group">
+            <label for="pwd">New-Password:</label>
+            <input type="password" name="passwords[new]" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-info btn-block ">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <!-- <div id="about" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
         <h2>About Company Page</h2><br>
@@ -82,7 +150,7 @@
   </div>
 
   <! Container (Services Section) -->
-  <!-- <div id="services" class="container-fluid text-center">
+    <!-- <div id="services" class="container-fluid text-center">
     <h2>SERVICES</h2>
     <h4>What we offer</h4>
     <br>
@@ -124,7 +192,7 @@
   </div>
 
   <! Container (Portfolio Section) -->
-  <!-- <div id="portfolio" class="container-fluid text-center bg-grey">
+    <!-- <div id="portfolio" class="container-fluid text-center bg-grey">
     <h2>Portfolio</h2><br>
     <h4>What we have created</h4>
     <div class="row text-center slideanim">
@@ -154,3 +222,6 @@
     <h2>What our customers say</h2>
     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
       <! Indicators -->
+
+</body>
+</html>
