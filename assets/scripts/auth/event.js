@@ -31,11 +31,19 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
    .catch(ui.signOutFailure)
 }
+const onRequest = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createRequest(data)
+    .then(ui.onRequestSuccess)
+    .catch(ui.onRequestFailure)
+}
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out-btn').on('click', onSignOut)
+  $('#req').on('submit', onRequest)
 }
 
 module.exports = {

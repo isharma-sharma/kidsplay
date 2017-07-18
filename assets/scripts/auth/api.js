@@ -34,7 +34,7 @@ const changePassword = function (data) {
     },
     data
   })
-  .then(console.log)
+    .then(console.log)
 }
 const signOut = function () {
   return $.ajax({
@@ -44,11 +44,27 @@ const signOut = function () {
       Authorization: 'Token token=' + store.userToken
     }
   })
-  .then(console.log)
+    .then(console.log)
 }
+
+const createRequest = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/requests',
+    method: 'POST',
+    data
+  })
+    .then((response) => {
+      store.request = response.request
+      return store
+    })
+    .then(console.log)
+}
+
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createRequest
 }

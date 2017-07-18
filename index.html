@@ -33,10 +33,10 @@
           <li><a href="#about">ABOUT</a></li>
           <li><a href="#activities">ACTIVITIES</a></li>
           <li><a href="#parents">PARENTS CORNER</a></li>
-          <li><a href="#prcb">REQUEST CALL BACK</a></li>
+          <li><button type="button" class="btn btn-info btn-lg" id="myBtn">REQUEST CALL BACK</button>
+          </li>
           <li><a href="#contact">CONTACT</a></li>
-          <li class ="dropdown">
-            <a class = "dropdown-toggle" data-toggle="dropdown" href ="#">
+          <li class ="dropdown"><a class = "dropdown-toggle" data-toggle="dropdown" href ="#">
               <span class="caret"></span></a>
                         <ul class="dropdown-menu">
           <li><a id="sign-up-btn" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -84,6 +84,11 @@
               <label for="pwd">ConfirmPassword:</label>
               <input type="password" name="credentials[password_confirmation]" class="form-control" id="pwd">
             </div>
+            <div>
+            <label for="role">sign-in-Role</label>
+          <input type="radio" name="credentials[role]" value="administrator" checked>Administrator<br>
+          <input type="radio" name="credentials[role]" value="teacher"> Teacher<br>
+        </div>
             <button type="submit" class="btn btn-success btn-block">Sign Up</button>
           </form>
           <!--sign-in form-->
@@ -119,6 +124,46 @@
         </form>
       </div>
     </div>
+<!--form for request call back-->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Request From</h4>
+        </div>
+        <div class="modal-body">
+          <form id="req" >
+                  <div class="form-group">
+                    <label for="name">name</label>
+                    <input type="text" name="request[name]" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="tele">Contactno:</label>
+                    <input type="number" name="request[telephone]" class="form-control" id="tele">
+                  </div>
+                  <div class="form-group">
+                    <label for="add">Address:</label>
+                    <input type="text" name="request[address]" class="form-control" id="add">
+                  </div>
+                  <div class="form-group">
+                    <label for="msg">MESSAGE:</label>
+                    <input type="text" name="request[message]" class="form-control" id="msg">
+                  </div>
+                  <button type="submit" class="btn btn-success btn-block">submit</button>
+                </form>
+               <p>we will soon call you back</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
     <!-- Container (About Section) -->
     <!-- <div id="about" class="container-fluid">

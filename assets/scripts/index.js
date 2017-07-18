@@ -32,3 +32,8 @@ $('#changePassword-btn').click(function () {
   $('#sign-in').hide()
   $('#change-password').show()
 })
+$(() => {
+  $('#myBtn').click(function () {
+    $('#myModal').modal()
+  })
+})

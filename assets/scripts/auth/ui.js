@@ -29,6 +29,9 @@ const signOutSuccess = () => {
 const signOutFailure = () => {
   console.log('signoutfaliue')
 }
+const onRequestSuccess = (data) => {
+  console.log(data)
+}
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -37,6 +40,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  onRequestSuccess
 
 }
