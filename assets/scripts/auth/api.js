@@ -23,7 +23,7 @@ const signIn = function (data) {
       return store
       // store.user.id = response.user.id
     })
-    .then(console.log)
+    .then(console.log(data))
 }
 const changePassword = function (data) {
   return $.ajax({
@@ -57,14 +57,62 @@ const createRequest = function (data) {
       store.request = response.request
       return store
     })
-    .then(console.log)
+    .then(console.log(store.request))
 }
 
-
+const getAllRequest = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/requests',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.userToken
+    }
+  })
+}
+const deleteRequest = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/requests/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.userToken
+    }
+  })
+  .then((response) => {
+    $("td[data-id='" + data + "']").remove()
+  })
+}
+const createStudent = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/students',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.userToken
+    },
+    data
+  })
+    // .then((response) => {
+    //   store.student = response.student
+    //   return store
+    // })
+    .then(console.log(data))
+}
+const getAllStudent = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/students',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.userToken
+    }
+  })
+}
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createRequest
+  createRequest,
+  getAllRequest,
+  createStudent,
+  deleteRequest,
+  getAllStudent
 }

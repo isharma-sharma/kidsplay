@@ -1,4 +1,4 @@
-
+const showRequestTemplate = require('../templates/request.handlebars')
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-up').hide()
@@ -29,8 +29,23 @@ const signOutSuccess = () => {
 const signOutFailure = () => {
   console.log('signoutfaliue')
 }
-const onRequestSuccess = (data) => {
+const getAllRequestSuccess = (data) => {
   console.log(data)
+  debugger
+  $('.request-table').empty()
+  const showrequestHtml = showRequestTemplate({ requests: data.requests })
+  console.log(showrequestHtml)
+  $('#requestadd').html(showrequestHtml)
+  $('#request-table').show()
+}
+const getAllRequestFailure = (error) => {
+  console.log(error)
+}
+const DeleteRequestSuccess = () => {
+  console.log('request delete')
+}
+const DeleteRequestFailure = (error) => {
+  console.log(error)
 }
 module.exports = {
   signUpSuccess,
@@ -41,6 +56,9 @@ module.exports = {
   changePasswordFailure,
   signOutSuccess,
   signOutFailure,
-  onRequestSuccess
+  getAllRequestSuccess,
+  getAllRequestFailure,
+  DeleteRequestSuccess,
+  DeleteRequestFailure
 
 }
