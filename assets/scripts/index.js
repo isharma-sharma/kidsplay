@@ -19,6 +19,7 @@ $(() => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#change-password').hide()
+  $('.request-table').hide()
 })
 
 $('#login-btn').click(function () {
@@ -35,5 +36,8 @@ $('#changePassword-btn').click(function () {
 $(() => {
   $('#myBtn').click(function () {
     $('#myModal').modal()
+  })
+  $('body').on('click', '.editStudent', function () {
+    $('#edit-student-modal').modal()
   })
 })

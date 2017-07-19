@@ -1,10 +1,9 @@
-
 {{#each requests as |request|}}
 <tr data-id="{{request.id}}">
 <td data-id="{{recipe.id}}"><button id="deleteRequest{{request.id}}" class="btn btn-default deleteRequest">Delete</button></td>
-<td class="rname" name="[request][name]"><{{request.name}}</td>
-<td class="rcontact" name="[request][telephone]"><{{request.telephone}}</td>
-<td class="raddresss" name="[request][addresss]"><{{request.addresss}}</td>
-<td class="rmessage" name="[request][message]"><{{request.message}}</td>
+<td class="rname" name="[request][name]">{{request.name}}</td>
+<td class="rcontact" name="[request][telephone]">{{request.telephone}}</td>
+<td class="raddresss" name="[request][addresss]">{{request.addresss}}</td>
+<td class="rmessage" name="[request][message]">{{request.message}}</td>
 </tr>
 {{/each}}

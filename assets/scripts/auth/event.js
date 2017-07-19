@@ -38,7 +38,7 @@ const onRequest = function (event) {
     .then(ui.onRequestSuccess)
     .catch(ui.onRequestFailure)
 }
-const onGetAllRequest = function (event) {
+const onGetAllRequest = function () {
   event.preventDefault()
   // const data = getFormFields(event.target)
   api.getAllRequest()
@@ -52,8 +52,7 @@ const onDeleteRequest = function (event) {
   console.log('this is what we need')
   console.log(id)
   api.deleteRequest(id)
-
-   .then(ui.DeleteRequestSuccess)
+   .then(ui.DeleteRequestSuccess(event))
    .catch(ui.DeleteRequestFailure)
 }
 const onCreateStudent = function (event) {
@@ -69,6 +68,26 @@ const onGetAllStudent = function () {
   .then(ui.getAllStudentSuccess)
   .catch(ui.getAllStudentFailure)
 }
+const onDeleteStudent = function (event) {
+  event.preventDefault()
+  console.log(event)
+  const id = $(event.target).parent().parent().attr('data-id')
+  console.log('this is what we need')
+  console.log(id)
+  api.deleteStudent(id)
+   .then(ui.deleteStudentSuccess(event))
+   .catch(ui.deleteStudentFailure)
+}
+const onUpdateStudent = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const id = $(event.target).parent().parent().attr('data-id')
+  console.log(id, data)
+  api.updateStudentInfo(id, data)
+  .then(ui.onUpdateStudentSuccess)
+  .catch(ui.onUpdateStudentfailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -76,8 +95,11 @@ const addHandlers = () => {
   $('#sign-out-btn').on('click', onSignOut)
   $('#req').on('submit', onRequest)
   $('#getreq').on('click', onGetAllRequest)
+  $('body').on('click', '.deleteRequest', onDeleteRequest)
   $('#crtstudnt').on('submit', onCreateStudent)
   $('#getstudnt').on('click', onGetAllStudent)
+  $('#std').on('submit', onUpdateStudent)
+  $('body').on('click', '.deleteStudent', onDeleteStudent)
 }
 
 module.exports = {

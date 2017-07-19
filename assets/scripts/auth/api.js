@@ -105,6 +105,33 @@ const getAllStudent = function () {
     }
   })
 }
+const updateStudentInfo = function (id, data) {
+  console.log('inside update student function data is--', data)
+  return $.ajax({
+    url: config.apiOrigin + '/students/' + id,
+    method: 'PATCH',
+    header: {
+      Authorization: 'Token token=' + store.userToken
+    },
+    data
+  })
+  .then((response) => {
+    console.log(data, id, response.student)
+    $("ul[data-id='" + id + "']").find('.std').text(response.student)
+  })
+}
+const deleteStudent = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/students/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.userToken
+    }
+  })
+  .then((response) => {
+    $("td[data-id='" + data + "']").remove()
+  })
+}
 module.exports = {
   signUp,
   signIn,
@@ -114,5 +141,7 @@ module.exports = {
   getAllRequest,
   createStudent,
   deleteRequest,
-  getAllStudent
+  getAllStudent,
+  updateStudentInfo,
+  deleteStudent
 }

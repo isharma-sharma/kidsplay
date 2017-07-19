@@ -33,26 +33,39 @@ const signOutFailure = () => {
 const getAllRequestSuccess = (data) => {
   console.log(data)
   debugger
-  $('.request-table').empty()
+  // $('.request-table').empty()
   const showrequestHtml = showRequestTemplate({ requests: data.requests })
   console.log(showrequestHtml)
   $('#requestadd').append(showrequestHtml)
-  $('#request-table').show()
 }
 const getAllRequestFailure = (error) => {
   console.log(error)
 }
-const DeleteRequestSuccess = () => {
-  console.log('request delete')
+const DeleteRequestSuccess = (event) => {
+  console.log(event)
+  console.log('this is event target:', $(event.target))
+  $(event.target).parent().parent().remove()
 }
 const DeleteRequestFailure = (error) => {
   console.log(error)
 }
 const getAllStudentSuccess = (data) => {
-  $('#student-table').empty()
   const showstudentHtml = showStudentTemplate({students: data.students})
   console.log(showstudentHtml)
   $('#studentAdd').append(showstudentHtml)
+}
+
+const onUpdateStudentSuccess = (data) => {
+  console.log(data)
+}
+
+const onUpdateStudentFailure = (error) => {
+  console.error(error)
+}
+const deleteStudentSuccess = (event) => {
+  console.log(event)
+  console.log('this is event target:', $(event.target))
+  $(event.target).parent().parent().remove()
 }
 module.exports = {
   signUpSuccess,
@@ -67,6 +80,8 @@ module.exports = {
   getAllRequestFailure,
   DeleteRequestSuccess,
   DeleteRequestFailure,
-  getAllStudentSuccess
-
+  getAllStudentSuccess,
+  onUpdateStudentSuccess,
+  onUpdateStudentFailure,
+  deleteStudentSuccess
 }

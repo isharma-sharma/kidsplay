@@ -56,7 +56,7 @@
 
   <div class="jumbotron text-center image1">
     <h1>THE GREAT MASTERS</h1>
-    <p>WE MAKE YOUR CHILD GROW AS OUR OWN</p>
+    <h2>kid's primary step toward education</h2>
     <!-- <form>
       <div class="input-group">
 
@@ -206,6 +206,7 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
+                <th></th>
                 <th>name</th>
                 <th>Contactno</th>
                 <th>Address:</th>
@@ -222,6 +223,8 @@
           <table class="table table-striped table-bordered">
             <thead>
               <tr>
+                <th></th>
+                <th></th>
                 <th>name</th>
                 <th>email</th>
                 <th>Address</th>
@@ -235,19 +238,53 @@
             </tbody>
           </table>
         </div>
+
+       <!--modal to be display for editing student info-->
+        <div class="modal fade" id="edit-student-modal" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">student From</h4>
+              </div>
+              <div class="modal-body">
+                <form id="std">
+                  <div class="form-group">
+                    <label for="add">Address:</label>
+                    <input type="text" name="student[address]" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="div">class:</label>
+                    <input type="text" name="student[division]" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <label for="eml">email:</label>
+                    <input type="email" name="student[email]" class="form-control">
+                  </div>
+                  <button type="submit" class="btn btn-success btn-block">submit</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+</div>
+</div>
+        <!--added map to see the location -->
         <!-- <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1774.0637389429064!2d77.95437730808722!3d27.215147195749537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3440db7d44469fff!2sHotel+Kanak+Palace+%26+Restaurant!5e0!3m2!1sen!2sus!4v1500420025366"
             width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div> -->
-        <!-- Container (About Section) -->
-        <!-- <div id="about" class="container-fluid">
+
+      <!--Container (About Section) -->
+         <!-- <div id="about" class="container-fluid">
     <div class="row">
       <div class="col-sm-8">
-        <h2>About Company Page</h2><br>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h2>The Great Masters</h2><br>
+        <h3> We believe that human rights of a child are non-negotiable </h3><br>
         <br><button class="btn btn-default btn-lg">Get in Touch</button>
       </div>
       <div class="col-sm-4">
-        <span class="glyphicon glyphicon-signal logo"></span>
+        <span class="glyphicon glyphicon-signal logo">will add the image of logo</span>
       </div>
     </div>
   </div>
@@ -259,16 +296,15 @@
       </div>
       <div class="col-sm-8">
         <h2>Our Values</h2><br>
-        <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-        <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+        <p>Our goal is to respond to the call of creating the emerging leaders of tomorrow. We are committed to impacting a synergy of skills, knowledge, and values in our children to lend them their inner voice for the 21st century.</p>
+        <h4><strong>MISSION:</strong> We envision today’s children as tomorrow’s leadership icons. We have impacted a milestone departure from the teacher-led to the child-centric. Our learning environment enables each child to realize their unique learning style, while our MI-aided methodology helps them discover their own creative and aesthetic potential.</h4><br>
+        <p><strong>VISION:</strong> The mission of THE GREAT MASTER is to build rich, meaningful learning experiences using the expertise and potential of staff, students, and families. We seek to help each student achieve academic success and develop a lifelong love of learning. We believe that all students must discover their capacity and responsibility to make a positive contribution to the world around them.
     </div>
-  </div>
+  </div> -->
 
   <! Container (Services Section) -->
-        <!-- <div id="services" class="container-fluid text-center">
-    <h2>SERVICES</h2>
+        <!-- <div id="activities" class="container-fluid text-center">
+    <h2>Activities/h2>
     <h4>What we offer</h4>
     <br>
     <div class="row slideanim">
