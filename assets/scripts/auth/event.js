@@ -56,12 +56,12 @@ const onDeleteRequest = function (event) {
    .then(ui.DeleteRequestSuccess)
    .catch(ui.DeleteRequestFailure)
 }
-const onStudent = function (event) {
+const onCreateStudent = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.createStudent(data)
-    .then(ui.onStudentSuccess)
-    .catch(ui.onStudentFailure)
+    .then(ui.onCreateStudentSuccess)
+    .catch(ui.onCreateStudentFailure)
 }
 const onGetAllStudent = function () {
   event.preventDefault()
@@ -76,7 +76,7 @@ const addHandlers = () => {
   $('#sign-out-btn').on('click', onSignOut)
   $('#req').on('submit', onRequest)
   $('#getreq').on('click', onGetAllRequest)
-  $('#crtstudnt').on('submit', onStudent)
+  $('#crtstudnt').on('submit', onCreateStudent)
   $('#getstudnt').on('click', onGetAllStudent)
 }
 

@@ -1,4 +1,5 @@
 const showRequestTemplate = require('../templates/request.handlebars')
+const showStudentTemplate = require('../templates/student.handlebars')
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-up').hide()
@@ -35,7 +36,7 @@ const getAllRequestSuccess = (data) => {
   $('.request-table').empty()
   const showrequestHtml = showRequestTemplate({ requests: data.requests })
   console.log(showrequestHtml)
-  $('#requestadd').html(showrequestHtml)
+  $('#requestadd').append(showrequestHtml)
   $('#request-table').show()
 }
 const getAllRequestFailure = (error) => {
@@ -46,6 +47,12 @@ const DeleteRequestSuccess = () => {
 }
 const DeleteRequestFailure = (error) => {
   console.log(error)
+}
+const getAllStudentSuccess = (data) => {
+  $('#student-table').empty()
+  const showstudentHtml = showStudentTemplate({students: data.students})
+  console.log(showstudentHtml)
+  $('#studentAdd').append(showstudentHtml)
 }
 module.exports = {
   signUpSuccess,
@@ -59,6 +66,7 @@ module.exports = {
   getAllRequestSuccess,
   getAllRequestFailure,
   DeleteRequestSuccess,
-  DeleteRequestFailure
+  DeleteRequestFailure,
+  getAllStudentSuccess
 
 }
