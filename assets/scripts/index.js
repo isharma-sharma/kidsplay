@@ -19,7 +19,6 @@ $(() => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#change-password').hide()
-  $('.request-table').hide()
 })
 
 $('#login-btn').click(function () {
