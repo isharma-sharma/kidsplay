@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/event.js')
+const editStudentTemplate = require('./templates/editStudents.handlebars')
 $(() => {
   setAPIOrigin(location, config)
 })
@@ -36,7 +37,16 @@ $(() => {
   $('#myBtn').click(function () {
     $('#myModal').modal()
   })
-  $('body').on('click', '.editStudent', function () {
+  $('body').on('click', '.editStudent', function (event) {
+    // get the ID from the DOM
+    const id = $(event.target).parent().attr('data-id')
+    console.log(id)
+    const editStudentHtml = editStudentTemplate ({ id: id })
+
+    $('#edit-student-modal .modal-body').html(editStudentHtml)
+    // generate the handlebars templates
+    // pass the id to the handlebars template
+    // add handlebars template to the modal
     $('#edit-student-modal').modal()
   })
 })

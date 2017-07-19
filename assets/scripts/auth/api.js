@@ -18,6 +18,7 @@ const signIn = function (data) {
     data
   })
     .then((response) => {
+      console.log("token is", response.user.token)
       store.userToken = response.user.token
       store.userId = response.user.id
       return store
@@ -106,7 +107,8 @@ const getAllStudent = function () {
   })
 }
 const updateStudentInfo = function (id, data) {
-  console.log('inside update student function data is--', data)
+  console.log('inside update student function data is--', data, id, store)
+  debugger
   return $.ajax({
     url: config.apiOrigin + '/students/' + id,
     method: 'PATCH',

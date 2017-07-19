@@ -81,7 +81,8 @@ const onDeleteStudent = function (event) {
 const onUpdateStudent = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  const id = $(event.target).parent().parent().attr('data-id')
+  const id = $(event.target).attr('data-id')
+  debugger
   console.log(id, data)
   api.updateStudentInfo(id, data)
   .then(ui.onUpdateStudentSuccess)
@@ -98,7 +99,7 @@ const addHandlers = () => {
   $('body').on('click', '.deleteRequest', onDeleteRequest)
   $('#crtstudnt').on('submit', onCreateStudent)
   $('#getstudnt').on('click', onGetAllStudent)
-  $('#std').on('submit', onUpdateStudent)
+  $('body').on('submit', '.std', onUpdateStudent)
   $('body').on('click', '.deleteStudent', onDeleteStudent)
 }
 

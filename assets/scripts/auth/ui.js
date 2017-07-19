@@ -52,7 +52,7 @@ const DeleteRequestFailure = (error) => {
 const getAllStudentSuccess = (data) => {
   const showstudentHtml = showStudentTemplate({students: data.students})
   console.log(showstudentHtml)
-  $('#studentAdd').append(showstudentHtml)
+  $('#studentAdd').html(showstudentHtml)
 }
 
 const onUpdateStudentSuccess = (data) => {
