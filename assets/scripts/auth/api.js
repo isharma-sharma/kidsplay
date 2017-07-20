@@ -112,14 +112,14 @@ const updateStudentInfo = function (id, data) {
   return $.ajax({
     url: config.apiOrigin + '/students/' + id,
     method: 'PATCH',
-    header: {
+    headers: {
       Authorization: 'Token token=' + store.userToken
     },
     data
   })
   .then((response) => {
-    console.log(data, id, response.student)
-    $("ul[data-id='" + id + "']").find('.std').text(response.student)
+    console.log('on api data is:', data)
+    $("td[data-id='" + id + "']").parent().text(store.student)
   })
 }
 const deleteStudent = function (data) {

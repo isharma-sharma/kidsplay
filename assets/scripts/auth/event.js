@@ -85,7 +85,7 @@ const onUpdateStudent = function (event) {
   debugger
   console.log(id, data)
   api.updateStudentInfo(id, data)
-  .then(ui.onUpdateStudentSuccess)
+  .then(ui.onUpdateStudentSuccess(event))
   .catch(ui.onUpdateStudentfailure)
 }
 

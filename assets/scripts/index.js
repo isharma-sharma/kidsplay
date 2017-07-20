@@ -41,7 +41,7 @@ $(() => {
     // get the ID from the DOM
     const id = $(event.target).parent().attr('data-id')
     console.log(id)
-    const editStudentHtml = editStudentTemplate ({ id: id })
+    const editStudentHtml = editStudentTemplate({ id: id })
 
     $('#edit-student-modal .modal-body').html(editStudentHtml)
     // generate the handlebars templates
