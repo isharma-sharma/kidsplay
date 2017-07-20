@@ -82,10 +82,9 @@ const onUpdateStudent = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = $(event.target).attr('data-id')
-  debugger
   console.log(id, data)
   api.updateStudentInfo(id, data)
-  .then(ui.onUpdateStudentSuccess(event))
+  .then(ui.onUpdateStudentSuccess)
   .catch(ui.onUpdateStudentfailure)
 }
 

@@ -18,7 +18,7 @@ const signIn = function (data) {
     data
   })
     .then((response) => {
-      console.log("token is", response.user.token)
+      console.log('token is', response.user.token)
       store.userToken = response.user.token
       store.userId = response.user.id
       return store
@@ -91,10 +91,10 @@ const createStudent = function (data) {
     },
     data
   })
-    // .then((response) => {
-    //   store.student = response.student
-    //   return store
-    // })
+    .then((response) => {
+      store.student = response.student
+      return store
+    })
     .then(console.log(data))
 }
 const getAllStudent = function () {
@@ -108,7 +108,6 @@ const getAllStudent = function () {
 }
 const updateStudentInfo = function (id, data) {
   console.log('inside update student function data is--', data, id, store)
-  debugger
   return $.ajax({
     url: config.apiOrigin + '/students/' + id,
     method: 'PATCH',
@@ -117,10 +116,11 @@ const updateStudentInfo = function (id, data) {
     },
     data
   })
-  .then((response) => {
-    console.log('on api data is:', data)
-    $("td[data-id='" + id + "']").parent().text(store.student)
-  })
+  // .then((response) => {
+  //   $("tr[data-id='" + id + "']").parent().text(response.student)
+  //   // console.log('the row is---', $("tr[data-id='" + id + "']"))
+  //   console.log(response.student)
+  // })
 }
 const deleteStudent = function (data) {
   return $.ajax({

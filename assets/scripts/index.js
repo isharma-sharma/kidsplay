@@ -24,9 +24,13 @@ $(() => {
 
 $('#login-btn').click(function () {
   $('#sign-in').show()
+  $('#sign-up').hide()
+  $('#change-password').hide()
 })
 $('#sign-up-btn').click(function () {
   $('#sign-up').show()
+  $('#change-password').hide()
+  $('#sign-in').hide()
 })
 $('#changePassword-btn').click(function () {
   $('#sign-up').hide()

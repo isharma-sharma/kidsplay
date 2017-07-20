@@ -1,6 +1,8 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
+const singleStudentTemplate = require('../templates/singlestudent.handlebars')
 const store = require('../store.js')
+const id = require('./event')
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-up').hide()
@@ -33,7 +35,6 @@ const signOutFailure = () => {
 }
 const getAllRequestSuccess = (data) => {
   console.log(data)
-  debugger
   // $('.request-table').empty()
   const showrequestHtml = showRequestTemplate({ requests: data.requests })
   console.log(showrequestHtml)
@@ -59,8 +60,10 @@ const getAllStudentSuccess = (data) => {
 }
 
 const onUpdateStudentSuccess = (data) => {
-  console.log('on ui the data is --:', data)
-  $(event.target).parent().html(data)
+  $("td[data-id='" + data.student.id + "']").parent().text(data.student.address)
+  // $('#student-table').show()
+  // $('.saddresss').text(data.student.address)
+  console.log(data.student.id)
 }
 
 const onUpdateStudentFailure = (error) => {
