@@ -1,6 +1,6 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
-
+const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
 const store = require('../store.js')
 const id = require('./event')
 const signUpSuccess = (data) => {
@@ -59,6 +59,11 @@ const getAllStudentSuccess = (data) => {
   $('#student-table').show()
 }
 
+const onCreateStudentSuccess = (data) => {
+  const showsinglestudentHtml = showSingleStudentTemplate({student: data.student})
+  // $('#studentAdd').html(showstudentHtml)
+  $('#studentAdd').append(showsinglestudentHtml)
+}
 const onUpdateStudentSuccess = (data) => {
   $('#saddress-' + data.student.id).text(data.student.address)
   $('#sdivision-' + data.student.id).text(data.student.division)
@@ -90,5 +95,6 @@ module.exports = {
   getAllStudentSuccess,
   onUpdateStudentSuccess,
   onUpdateStudentFailure,
-  deleteStudentSuccess
+  deleteStudentSuccess,
+  onCreateStudentSuccess
 }
