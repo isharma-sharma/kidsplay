@@ -116,11 +116,6 @@ const updateStudentInfo = function (id, data) {
     },
     data
   })
-  // .then((response) => {
-  //   $("tr[data-id='" + id + "']").parent().text(response.student)
-  //   // console.log('the row is---', $("tr[data-id='" + id + "']"))
-  //   console.log(response.student)
-  // })
 }
 const deleteStudent = function (data) {
   return $.ajax({

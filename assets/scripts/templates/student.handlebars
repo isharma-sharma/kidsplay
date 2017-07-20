@@ -1,14 +1,12 @@
 {{#each students as |student|}}
-<h1>{{student.id}}</h1>
 <tr data-id="{{student.id}}" >
   <td data-id="{{student.id}}"><button id="deleteStudent{{student.id}}" class="btn btn-default deleteStudent">Delete</button></td>
   <td data-id="{{student.id}}"><button id="editStudent{{student.id}}" class="btn btn-default editStudent" data-toggle="modal" data-target="#updateStudent">Edit</button></td>
   <td class="sname" name="[student][name]">{{student.name}}</td>
-  <td class="scontact" name="[student][email]">{{student.email}}</td>
-  <td class="saddresss" name="[student][addresss]">{{student.addresss}}</td>
-  <td class="smessage" name="[student][gender]">{{student.gender}}</td>
-  <td class="sdivision" name="[student][division]">{{student.division}}</td>
-  <td class="smessage" name="[student][dateofbirth]">{{student.dateofbirth}}</td>
+  <td id="semail-{{student.id}}"class="semail" name="[student][email]">{{student.email}}</td>
+  <td id="saddress-{{student.id}}"class="saddress" name="[student][addresss]">{{student.address}}</td>
+  <td class="sgender" name="[student][gender]">{{student.gender}}</td>
+  <td id="sdivision-{{student.id}}" class="sdivision" name="[student][division]">{{student.division}}</td>
+  <td class="sbirth" name="[student][dateofbirth]">{{student.dob}}</td>
 </tr>
-<h1>HELLO!</h1>
 {{/each}}

@@ -1,6 +1,6 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
-const singleStudentTemplate = require('../templates/singlestudent.handlebars')
+
 const store = require('../store.js')
 const id = require('./event')
 const signUpSuccess = (data) => {
@@ -60,9 +60,9 @@ const getAllStudentSuccess = (data) => {
 }
 
 const onUpdateStudentSuccess = (data) => {
-  $("td[data-id='" + data.student.id + "']").parent().text(data.student.address)
-  // $('#student-table').show()
-  // $('.saddresss').text(data.student.address)
+  $('#saddress-' + data.student.id).text(data.student.address)
+  $('#sdivision-' + data.student.id).text(data.student.division)
+  $('#semail-' + data.student.id).text(data.student.email)
   console.log(data.student.id)
 }
 
