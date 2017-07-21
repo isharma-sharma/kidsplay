@@ -32,6 +32,10 @@ const changePasswordFailure = (error) => {
 
 const signOutSuccess = () => {
   console.log('signOutSuccess')
+  $('#cretstnd').hide()
+  $('#crtstudnt').hide()
+  $('#getstudnt').hide()
+  $('#getreq').hide()
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
