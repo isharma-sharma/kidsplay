@@ -6,7 +6,7 @@ BACKEND REPO: https://github.com/isharma-sharma/kids-school-backend
 DEPLOYED REPO: https://thegreatmaster.herokuapp.com/
 
   ABOUT!!
-I decided to solve a problem for owner of playschools and other kid's school. 
+I decided to solve a problem for owner of playschools and other kid's school.
 I got this idea as my brother has just opened a kid's playschool"The Great Master".
 He will be using this website in order to maintain the student record and also to keep the track of those students how's parents inquired.
 
@@ -26,8 +26,7 @@ I used posgress postgres to Rails to create the API. While planning, I gathered
 the requirement from my brother and then designed the Wireframe which made it easier
 how to build both parts.
 
-WireFrame!!!
-https://user-images.githubusercontent.com/27626771/28446920-d48c1e7a-6d9b-11e7-84ef-ac7b6c798834.jpg
+![WireFrame](https://user-images.githubusercontent.com/27626771/28446920-d48c1e7a-6d9b-11e7-84ef-ac7b6c798834.jpg)
 ERD!!!
 https://user-images.githubusercontent.com/27626771/28446922-d793b844-6d9b-11e7-9d86-e649ddcd0002.jpg
 
