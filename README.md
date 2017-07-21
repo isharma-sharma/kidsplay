@@ -27,8 +27,7 @@ the requirement from my brother and then designed the Wireframe which made it ea
 how to build both parts.
 
 ![WireFrame](https://user-images.githubusercontent.com/27626771/28446920-d48c1e7a-6d9b-11e7-84ef-ac7b6c798834.jpg)
-ERD!!!
-https://user-images.githubusercontent.com/27626771/28446922-d793b844-6d9b-11e7-9d86-e649ddcd0002.jpg
+![ERD!!!](https://user-images.githubusercontent.com/27626771/28446922-d793b844-6d9b-11e7-9d86-e649ddcd0002.jpg)
 
  Technologies/Dependencies used:-
  Handlebars, Bootstrap, postgressql
