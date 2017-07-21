@@ -37,7 +37,11 @@ const signOutFailure = () => {
   console.log('signoutfaliue')
 }
 const getAllRequestSuccess = (data) => {
-  console.log(data)
+  if (data.requests.length === 0) {
+    console.log(data.requests)
+    $('#head').hide()
+  }
+  // console.log(data.requests)
   // $('.request-table').empty()
   const showrequestHtml = showRequestTemplate({
     requests: data.requests
@@ -58,6 +62,10 @@ const DeleteRequestFailure = (error) => {
   console.log(error)
 }
 const getAllStudentSuccess = (data) => {
+  if (data.students.length === 0) {
+    console.log(data.students)
+    $('#sthide').hide()
+  }
   const showstudentHtml = showStudentTemplate({students: data.students})
   // console.log(showstudentHtml)
   $('#studentAdd').html(showstudentHtml)
