@@ -6,7 +6,7 @@ BACKEND REPO: https://github.com/isharma-sharma/kids-school-backend
 DEPLOYED REPO: https://thegreatmaster.herokuapp.com/
 
   ABOUT!!
-I decided to solve a problem for owner of playschools and other kid's school.
+I decided to solve a problem for owner of playschools and other kid's school. 
 I got this idea as my brother has just opened a kid's playschool"The Great Master".
 He will be using this website in order to maintain the student record and also to keep the track of those students how's parents inquired.
 

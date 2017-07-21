@@ -1,11 +1,11 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
 const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
-const store = require('../store.js')
-const id = require('./event')
+
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-up').hide()
+
 }
 const signUpFailure = (error) => {
   console.error(error)
@@ -29,6 +29,7 @@ const changePasswordFailure = (error) => {
 
 const signOutSuccess = () => {
   console.log('signOutSuccess')
+
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
