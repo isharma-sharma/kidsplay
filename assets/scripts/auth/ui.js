@@ -5,7 +5,6 @@ const showSingleStudentTemplate = require('../templates/singlestudent.handlebars
 const signUpSuccess = (data) => {
   console.log(data)
   $('#sign-up').hide()
-
 }
 const signUpFailure = (error) => {
   console.error(error)
@@ -14,6 +13,10 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log(data)
   $('#sign-in').hide()
+  $('#cretstnd').show()
+  $('#getstudnt').show()
+  $('#getreq').show()
+  $('#myBtn').hide()
 }
 
 const signInFailure = (error) => {
@@ -29,7 +32,6 @@ const changePasswordFailure = (error) => {
 
 const signOutSuccess = () => {
   console.log('signOutSuccess')
-
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
@@ -37,7 +39,9 @@ const signOutFailure = () => {
 const getAllRequestSuccess = (data) => {
   console.log(data)
   // $('.request-table').empty()
-  const showrequestHtml = showRequestTemplate({ requests: data.requests })
+  const showrequestHtml = showRequestTemplate({
+    requests: data.requests
+  })
   console.log(showrequestHtml)
   $('#requestadd').html(showrequestHtml)
   $('#request-table').show()
@@ -61,7 +65,9 @@ const getAllStudentSuccess = (data) => {
 }
 
 const onCreateStudentSuccess = (data) => {
-  const showsinglestudentHtml = showSingleStudentTemplate({student: data.student})
+  const showsinglestudentHtml = showSingleStudentTemplate({
+    student: data.student
+  })
   // $('#studentAdd').html(showstudentHtml)
   $('#studentAdd').append(showsinglestudentHtml)
 }

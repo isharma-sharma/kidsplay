@@ -20,6 +20,10 @@ $(() => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#change-password').hide()
+  $('#cretstnd').hide()
+  $('#crtstudnt').hide()
+  $('#getstudnt').hide()
+  $('#getreq').hide()
 })
 
 $('#login-btn').click(function () {
@@ -36,6 +40,9 @@ $('#changePassword-btn').click(function () {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#change-password').show()
+})
+$('#cretstnd').click(function (){
+$('#crtstudnt').show()
 })
 $(() => {
   $('#myBtn').click(function () {
