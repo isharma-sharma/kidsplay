@@ -4,13 +4,14 @@ FRONT END REPO: https://github.com/isharma-sharma/kidsplay
 DEPLOYED FRONT END: https://isharma-sharma.github.io/kidsplay/
 BACKEND REPO: https://github.com/isharma-sharma/kids-school-backend
 DEPLOYED REPO: https://thegreatmaster.herokuapp.com/
+LINK OF MY COMMITS: https://github.com/isharma-sharma/kidsplay/commits/
 
   ABOUT!!
 I decided to solve a problem for owner of playschools and other kid's school.
 I got this idea as my brother has just opened a kid's playschool"The Great Master".
 He will be using this website in order to maintain the student record and also to keep the track of those students how's parents inquired.
 
-![IMAGE OF PROJECT](https://user-images.githubusercontent.com/27626771/28494026-947c0e34-6ef0-11e7-822e-3afe56194839.png)
+![IMAGE OF PROJECT](https://user-images.githubusercontent.com/27626771/28494063-51a2adce-6ef1-11e7-9acb-b8090dde4e2e.png)
 
 USER STORIES
 
