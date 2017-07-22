@@ -2,32 +2,64 @@ const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
 const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
 
+const resetForm = function resetForm ($form) {
+  $form.find('input:text, input:password, input:file, input:email, select, textarea').val('')
+  $form.find('input:radio, input:checkbox')
+         .removeAttr('checked').removeAttr('selected')
+}
 const signUpSuccess = (data) => {
+  resetForm($('#sign-up'))
   console.log(data)
   $('#sign-up').hide()
+  $('#success').show()
+  $('#error').hide()
+  $('#succmsg').text('signUpSuccess now signin')
+  // $('#updatemsg').text('signUpSuccess now signin')
 }
 const signUpFailure = (error) => {
   console.error(error)
+  $('#success').hide()
+  $('#error').show()
+  $('#errmsg').text('Signup failed.User name already exist or password is not confirmed')
 }
 
 const signInSuccess = (data) => {
   console.log(data)
   $('#sign-in').hide()
+  resetForm($('#sign-in'))
   $('#cretstnd').show()
   $('#getstudnt').show()
   $('#getreq').show()
   $('#myBtn').hide()
+  $('#success').show()
+  $('#error').hide()
+  $('#succmsg').text('welcome user')
+  $('#changePassword-btn').show()
+  $('#sign-out-btn').show()
 }
 
 const signInFailure = (error) => {
+  resetForm($('#sign-in'))
+  $('#sign-in').show()
   console.error(error)
+  $('#success').hide()
+  $('#error').show()
+  $('#errmsg').text('SignIn failed.new user sign-up first ,Or your password or role doesnot match')
 }
 const changePasswordSuccess = (data) => {
   console.log(data)
-  $('#change-password').show()
+  $('.form').reset()
+  $('#success').show()
+  $('#error').hide()
+  $('#succmsg').text('your password has been changed')
+  $('#change-password').hide()
 }
 const changePasswordFailure = (error) => {
+  resetForm($('#change-password'))
   console.error(error)
+  $('#success').hide()
+  $('#error').show()
+  $('#errmsg').text('your old password doesnot match')
 }
 
 const signOutSuccess = () => {
@@ -36,6 +68,9 @@ const signOutSuccess = () => {
   $('#crtstudnt').hide()
   $('#getstudnt').hide()
   $('#getreq').hide()
+  $('#success').show()
+  $('#error').hide()
+  $('#succmsg').text('you signed out successfully')
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')

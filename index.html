@@ -100,7 +100,7 @@
           <h2>Login</h2>
           <div class="form-group">
             <label for="email">Email address:</label>
-            <input type="email" name="credentials[email]" class="form-control" id="email">
+            <input type="email" name="credentials[email]"  class="form-control" id="email">
           </div>
           <div class="form-group">
             <label for="pwd">Password:</label>
@@ -204,6 +204,19 @@
             <button type="submit" class="btn btn-success btn-block">submit</button>
           </form>
         </div>
+        <!--div for show msg of success and faliure-->
+        <div id="updatemsg">
+  <div class="alert alert-success alert-dismissable" id="success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong><span id="succmsg"></span>
+  </div>
+
+  <div class="alert alert-danger alert-dismissable" id="error">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>try again!</strong><span id="errmsg"></span>
+  </div>
+
+</div>
         <!--div for the table for all request -->
         <div id="request-table" class="table-responsive request-table" hidden = "true">
           <table class="table table-striped table-bordered">

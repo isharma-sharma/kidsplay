@@ -24,12 +24,16 @@ $(() => {
   $('#crtstudnt').hide()
   $('#getstudnt').hide()
   $('#getreq').hide()
+  $('#success').hide()
+  $('#error').hide()
+  $('#changePassword-btn').hide()
+  $('#sign-out-btn').hide()
 })
 
 $('#login-btn').click(function () {
   $('#sign-in').show()
   $('#sign-up').hide()
-  $('#change-password').hide()
+  // $('#change-password').hide()
 })
 $('#sign-up-btn').click(function () {
   $('#sign-up').show()
@@ -41,8 +45,8 @@ $('#changePassword-btn').click(function () {
   $('#sign-in').hide()
   $('#change-password').show()
 })
-$('#cretstnd').click(function (){
-$('#crtstudnt').show()
+$('#cretstnd').click(function () {
+  $('#crtstudnt').show()
 })
 $(() => {
   $('#myBtn').click(function () {

@@ -10,7 +10,7 @@ I decided to solve a problem for owner of playschools and other kid's school.
 I got this idea as my brother has just opened a kid's playschool"The Great Master".
 He will be using this website in order to maintain the student record and also to keep the track of those students how's parents inquired.
 
-IMAGE OF PROJECT
+![IMAGE OF PROJECT](https://user-images.githubusercontent.com/27626771/28494026-947c0e34-6ef0-11e7-822e-3afe56194839.png)
 
 USER STORIES
 
