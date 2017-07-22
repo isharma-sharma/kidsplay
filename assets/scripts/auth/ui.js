@@ -9,6 +9,7 @@ const showSingleStudentTemplate = require('../templates/singlestudent.handlebars
 // }
 const signUpSuccess = (data) => {
   // resetForm($('#sign-up'))
+  $('.form-control').val(' ')
   console.log(data)
   $('#sign-up').hide()
   $('#success').show()
@@ -29,7 +30,8 @@ const signInSuccess = (data) => {
   $('#sign-in').hide()
   $('#changePassword-btn').show()
   $('#sign-out-btn').show()
-  // $('#sign-in').empty()
+  debugger
+  $('.form-control').val(' ')
   $('#cretstnd').show()
   $('#getstudnt').show()
   $('#getreq').show()
@@ -50,7 +52,7 @@ const signInFailure = (error) => {
 }
 const changePasswordSuccess = (data) => {
   console.log(data)
-  // $('.form').reset()
+  $('.form-control').val(' ')
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('your password has been changed')
@@ -66,6 +68,7 @@ const changePasswordFailure = (error) => {
 
 const signOutSuccess = () => {
   console.log('signOutSuccess')
+  $('.form-control').val(' ')
   $('#cretstnd').hide()
   $('#crtstudnt').hide()
   $('#getstudnt').hide()
