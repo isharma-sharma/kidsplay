@@ -2,13 +2,13 @@ const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
 const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
 
-const resetForm = function resetForm ($form) {
-  $form.find('input:text, input:password, input:file, input:email, select, textarea').val('')
-  $form.find('input:radio, input:checkbox')
-         .removeAttr('checked').removeAttr('selected')
-}
+// const resetForm = function resetForm ($form) {
+//   $form.find('input:text, input:password, input:file, input:email, select, textarea').val('')
+//   $form.find('input:radio, input:checkbox')
+//   .removeAttr('checked').removeAttr('selected')
+// }
 const signUpSuccess = (data) => {
-  resetForm($('#sign-up'))
+  // resetForm($('#sign-up'))
   console.log(data)
   $('#sign-up').hide()
   $('#success').show()
@@ -18,6 +18,7 @@ const signUpSuccess = (data) => {
 }
 const signUpFailure = (error) => {
   console.error(error)
+  $('#sign-up').hide()
   $('#success').hide()
   $('#error').show()
   $('#errmsg').text('Signup failed.User name already exist or password is not confirmed')
@@ -26,7 +27,9 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log(data)
   $('#sign-in').hide()
-  resetForm($('#sign-in'))
+  $('#changePassword-btn').show()
+  $('#sign-out-btn').show()
+  // $('#sign-in').empty()
   $('#cretstnd').show()
   $('#getstudnt').show()
   $('#getreq').show()
@@ -34,12 +37,11 @@ const signInSuccess = (data) => {
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('welcome user')
-  $('#changePassword-btn').show()
-  $('#sign-out-btn').show()
+  $('#login-btn').hide()
 }
 
 const signInFailure = (error) => {
-  resetForm($('#sign-in'))
+  // resetForm($('#sign-in'))
   $('#sign-in').show()
   console.error(error)
   $('#success').hide()
@@ -48,14 +50,14 @@ const signInFailure = (error) => {
 }
 const changePasswordSuccess = (data) => {
   console.log(data)
-  $('.form').reset()
+  // $('.form').reset()
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('your password has been changed')
   $('#change-password').hide()
 }
 const changePasswordFailure = (error) => {
-  resetForm($('#change-password'))
+  // resetForm($('#change-password'))
   console.error(error)
   $('#success').hide()
   $('#error').show()
@@ -71,6 +73,8 @@ const signOutSuccess = () => {
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('you signed out successfully')
+  $('#sign-out-btn').hide()
+  $('#login-btn').show()
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
