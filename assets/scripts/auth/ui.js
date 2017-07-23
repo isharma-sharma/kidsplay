@@ -9,7 +9,7 @@ const showSingleStudentTemplate = require('../templates/singlestudent.handlebars
 // }
 const signUpSuccess = (data) => {
   // resetForm($('#sign-up'))
-  $('.form-control').val(' ')
+  $('.form-control').val('')
   console.log(data)
   $('#sign-up').hide()
   $('#success').show()
@@ -19,6 +19,7 @@ const signUpSuccess = (data) => {
 }
 const signUpFailure = (error) => {
   console.error(error)
+  $('.form-control').val('')
   $('#sign-up').hide()
   $('#success').hide()
   $('#error').show()
@@ -30,8 +31,7 @@ const signInSuccess = (data) => {
   $('#sign-in').hide()
   $('#changePassword-btn').show()
   $('#sign-out-btn').show()
-  debugger
-  $('.form-control').val(' ')
+  $('.form-control').val('')
   $('#cretstnd').show()
   $('#getstudnt').show()
   $('#getreq').show()
@@ -43,7 +43,7 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = (error) => {
-  // resetForm($('#sign-in'))
+  $('.form-control').val('')
   $('#sign-in').show()
   console.error(error)
   $('#success').hide()
@@ -52,14 +52,14 @@ const signInFailure = (error) => {
 }
 const changePasswordSuccess = (data) => {
   console.log(data)
-  $('.form-control').val(' ')
+  $('.form-control').val('')
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('your password has been changed')
   $('#change-password').hide()
 }
 const changePasswordFailure = (error) => {
-  // resetForm($('#change-password'))
+  $('.form-control').val('')
   console.error(error)
   $('#success').hide()
   $('#error').show()
@@ -68,7 +68,7 @@ const changePasswordFailure = (error) => {
 
 const signOutSuccess = () => {
   console.log('signOutSuccess')
-  $('.form-control').val(' ')
+  $('.form-control').val('')
   $('#cretstnd').hide()
   $('#crtstudnt').hide()
   $('#getstudnt').hide()
@@ -81,6 +81,7 @@ const signOutSuccess = () => {
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
+  $('.form-control').val('')
 }
 const getAllRequestSuccess = (data) => {
   if (data.requests.length === 0) {
