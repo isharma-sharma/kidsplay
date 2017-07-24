@@ -68,3 +68,6 @@ $(() => {
 $('.editstud').click(function () {
 
 })
+$('.closestd').click(function () {
+  $('#crtstudnt').hide()
+})
