@@ -14,7 +14,7 @@ const signUpSuccess = (data) => {
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('signUpSuccess now signin')
-  // $('#updatemsg').text('signUpSuccess now signin')
+  $('#succmsg').show()
 }
 const signUpFailure = (error) => {
   console.error(error)
