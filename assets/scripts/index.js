@@ -65,3 +65,6 @@ $(() => {
     $('#edit-student-modal').modal()
   })
 })
+$('.editstud').click(function () {
+
+})

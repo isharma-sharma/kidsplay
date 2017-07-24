@@ -1,5 +1,4 @@
 const getFormFields = require('../../../lib/get-form-fields')
-// const removebton = require('../templates/car-listing.handlebars')
 const api = require('./api')
 const ui = require('./ui')
 // const store = require('../store')

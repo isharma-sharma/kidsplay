@@ -1,7 +1,7 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
 const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
-
+const api = require('./api')
 // const resetForm = function resetForm ($form) {
 //   $form.find('input:text, input:password, input:file, input:email, select, textarea').val('')
 //   $form.find('input:radio, input:checkbox')
@@ -73,11 +73,13 @@ const signOutSuccess = () => {
   $('#crtstudnt').hide()
   $('#getstudnt').hide()
   $('#getreq').hide()
+  $('#myBtn').show()
   $('#success').show()
   $('#error').hide()
   $('#succmsg').text('you signed out successfully')
   $('#sign-out-btn').hide()
   $('#login-btn').show()
+  $('#student-table').hide()
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
@@ -85,17 +87,16 @@ const signOutFailure = () => {
 }
 const getAllRequestSuccess = (data) => {
   if (data.requests.length === 0) {
-    console.log(data.requests)
-    $('#head').hide()
+    $('.head').hide()
+    $('#success').show()
+    $('#succmsg').text('no request on the list')
+  } else {
+    const showrequestHtml = showRequestTemplate({
+      requests: data.requests
+    })
+    $('#requestadd').html(showrequestHtml)
+    $('#request-table').show()
   }
-  // console.log(data.requests)
-  // $('.request-table').empty()
-  const showrequestHtml = showRequestTemplate({
-    requests: data.requests
-  })
-  console.log(showrequestHtml)
-  $('#requestadd').html(showrequestHtml)
-  $('#request-table').show()
 }
 const getAllRequestFailure = (error) => {
   console.log(error)
@@ -110,16 +111,23 @@ const DeleteRequestFailure = (error) => {
 }
 const getAllStudentSuccess = (data) => {
   if (data.students.length === 0) {
-    console.log(data.students)
-    $('#sthide').hide()
+    $('.head1').hide()
+    $('#success').show()
+    $('#succmsg').text('no student on the list')
+  } else {
+    $('#student-table').show()
+    $('.head1').show()
+    const showstudentHtml = showStudentTemplate({
+      students: data.students
+    })
+    // console.log(showstudentHtml)
+    $('#studentAdd').html(showstudentHtml)
   }
-  const showstudentHtml = showStudentTemplate({students: data.students})
-  // console.log(showstudentHtml)
-  $('#studentAdd').html(showstudentHtml)
-  $('#student-table').show()
 }
-
 const onCreateStudentSuccess = (data) => {
+  $('#student-table').show()
+  $('.head1').show()
+  $('.form-control').val('')
   const showsinglestudentHtml = showSingleStudentTemplate({
     student: data.student
   })
@@ -127,10 +135,9 @@ const onCreateStudentSuccess = (data) => {
   $('#studentAdd').append(showsinglestudentHtml)
 }
 const onUpdateStudentSuccess = (data) => {
-  $('#saddress-' + data.student.id).text(data.student.address)
-  $('#sdivision-' + data.student.id).text(data.student.division)
-  $('#semail-' + data.student.id).text(data.student.email)
-  console.log(data.student.id)
+  $('.saddress-' + data.student.id).text(data.student.address)
+  $('.sdivision-' + data.student.id).text(data.student.division)
+  $('.semail-' + data.student.id).text(data.student.email)
 }
 
 const onUpdateStudentFailure = (error) => {
