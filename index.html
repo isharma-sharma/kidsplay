@@ -76,21 +76,21 @@
 
       <div class="form">
         <form id="sign-up">
-          <h2>Signup</h2>
+          <h2>SIGN-UP</h2>
           <div class="form-group">
-            <label for="email">Email address:</label>
+            <label for="email">EMAIL</label>
             <input type="email" name="credentials[email]" class="form-control" id="email">
           </div>
           <div class="form-group">
-            <label for="pwd">Password:</label>
+            <label for="pwd">PASSWORD</label>
             <input type="password" name="credentials[password]" class="form-control" id="pwd">
           </div>
           <div class="form-group">
-            <label for="pwd">ConfirmPassword:</label>
+            <label for="pwd">CONFIRM PASSWORD</label>
             <input type="password" name="credentials[password_confirmation]" class="form-control" id="pwd">
           </div>
           <div>
-            <label for="role">Role</label>
+            <label for="role">ROLE</label>
             <input type="radio" name="credentials[role]"   value="administrator" checked>Administrator
             <input type="radio" name="credentials[role]"  value="teacher"> Teacher
           </div>
@@ -100,32 +100,32 @@
         <form id="sign-in">
           <h2>Login</h2>
           <div class="form-group">
-            <label for="email">Email address:</label>
+            <label for="email">EMAIL</label>
             <input type="email" name="credentials[email]"  class="form-control" id="email">
           </div>
           <div class="form-group">
-            <label for="pwd">Password:</label>
+            <label for="pwd">PASSWORD</label>
             <input type="password" name="credentials[password]" class="form-control" id="pwd">
           </div>
           <div>
-            <label for="role">Role</label>
+            <label for="role">ROLE</label>
             <input type="radio" name="credentials[role]"   value="administrator" checked>Administrator
             <input type="radio" name="credentials[role]"   value="teacher"> Teacher
           </div>
-          <button type="submit" class="btn btn-primary btn-block" class="sin">Login</button>
+          <button type="submit" class="btn btn-primary btn-block" class="sin">LOGIN</button>
         </form>
         <!--changepassword form-->
         <form id="change-password">
           <h2>CHANGE PASSWORD</h2>
           <div class="form-group">
-            <label for="pwd"> Old-Password:</label>
+            <label for="pwd"> OLD-PASSWORD:</label>
             <input type="password" name="passwords[old]" class="form-control" id="pwd">
           </div>
           <div class="form-group">
-            <label for="pwd">New-Password:</label>
+            <label for="pwd">NEW-PASSWORD:</label>
             <input type="password" name="passwords[new]" class="form-control" id="pwd">
           </div>
-          <button type="submit" class="btn btn-info btn-block ">Submit</button>
+          <button type="submit" class="btn btn-info btn-block ">SUBMIT</button>
         </form>
       </div>
     </div>
@@ -137,32 +137,32 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Request From</h4>
+            <h4 class="modal-title">REQUEST FORM</h4>
           </div>
           <div class="modal-body">
             <form id="req">
               <div class="form-group">
-                <label for="name">name</label>
+                <label for="name">NAME</label>
                 <input type="text" name="request[name]" class="form-control" id="email">
               </div>
               <div class="form-group">
-                <label for="tele">Contactno:</label>
+                <label for="tele">CONTACT NO.:</label>
                 <input type="tel" name="request[telephone]" class="form-control" id="tele">
               </div>
               <div class="form-group">
-                <label for="add">Address:</label>
+                <label for="add">ADDRESS:</label>
                 <input type="text" name="request[address]" class="form-control" id="add">
               </div>
               <div class="form-group">
                 <label for="msg">MESSAGE:</label>
                 <textarea type="text" name="request[message]" class="form-control" id="msg" rows="5"></textarea>
               </div>
-              <button type="submit" class="btn btn-success btn-block">submit</button>
+              <button type="submit" class="btn btn-success btn-block">SUBMIT</button>
             </form>
-            <p>we will soon call you back</p>
+            <p>WE WILL CALL YOU BACK SOON</p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">CLOSE</button>
           </div>
         </div>
 
@@ -170,40 +170,40 @@
     </div>
     <!--button for gettingallrequest & ongetAllStudent -->
     <div>
-      <button type="button" class="btn btn-default" id=getreq>checkout-Request!!</button>
-            <button type="button" class="btn btn-default" id=getstudnt>SeeAllStudents</button>
-            <button type="button" class="btn btn-default" id=cretstnd>ADD Student to list</button>
+      <button type="button" class="btn btn-default btn-primary" id=getreq >Request-List!!</button>
+            <button type="button" class="btn btn-default btn-primary" id=getstudnt>Student-List!!</button>
+            <button type="button" class="btn btn-default btn-primary" id=cretstnd>ADD-Student!!</button>
       </div>
         <!--form feild for students -->
         <div class="col-sm-4 crtstudnt">
           <form id="crtstudnt">
             <div class="form-group">
-              <label for="name">name</label>
+              <label for="name">NAME</label>
               <input type="text" name="student[name]" class="form-control">
             </div>
             <div class="form-group">
-              <label for="eml">email:</label>
+              <label for="eml">EMAIL:</label>
               <input type="email" name="student[email]" class="form-control">
             </div>
             <div class="form-group">
-              <label for="add">Address:</label>
+              <label for="add">ADDRESS:</label>
               <input type="text" name="student[address]" class="form-control">
             </div>
             <div class="form-group">
-              <label for="div">class:</label>
+              <label for="div">CLASS:</label>
               <input type="text" name="student[division]" class="form-control">
             </div>
             <div>
-              <label for="role">gender</label>
-              <input type="radio" name="student[gender]" value="boy" checked>BOY<br>
-              <input type="radio" name="student[gender]" value="tgirl">GIRL<br>
+              <label for="role">GENDER</label>
+              <input type="radio" name="student[gender]" value="boy" checked>BOY
+              <input type="radio" name="student[gender]" value="tgirl">GIRL
             </div>
             <div class="form-group">
               <label for="dat">DATE OF BIRTH:</label>
               <input type="date" name="student[dob]" class="form-control" id="dat">
             </div>
-            <button type="submit" class="btn btn-success btn-block">submit</button>
-            <button type="button" class="btn btn-warning closestd">close</button>
+            <button type="submit" class="btn btn-success btn-block">SUBMIT</button>
+            <button type="button" class="btn btn-warning closestd">CLOSE</button>
             <!-- <button type="button" class=" col-sm-4 btn btn-success btn-block">close</button> -->
 
           </form>
@@ -227,9 +227,9 @@
             <thead class="head">
               <tr>
                 <th></th>
-                <th>name</th>
-                <th>Contactno</th>
-                <th>Address:</th>
+                <th>NAME</th>
+                <th>CONTACT NO.</th>
+                <th>ADDRESS:</th>
                 <th>MESSAGE:</th>
               </tr>
             </thead>
@@ -245,12 +245,12 @@
               <tr>
                 <th></th>
                 <th></th>
-                <th>name</th>
-                <th>email</th>
-                <th>Address</th>
-                <th>gender</th>
-                <th>class</th>
-                <th>dateofbirth</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>ADDRESS</th>
+                <th>GENDER</th>
+                <th>CLASS</th>
+                <th>DATE-OF-BIRTH</th>
               </tr>
             </thead>
             <tbody id="studentAdd" class="studentAdd">
@@ -266,7 +266,7 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">student update form</h4>
+                <h4 class="modal-title">STUDENT UPDATE FORM</h4>
               </div>
               <div class="modal-body">
                 <!-- <form class="std">
@@ -300,7 +300,7 @@
     <div class="row" class='.about'>
       <div class="col-sm-8">
         <!-- <img src="./assets/styles/images/image8.jpg" z-index: "-2";> -->
-        <h2>The Great Masters</h2><br>
+        <h2>The Great Master</h2><br>
         <h3> We believe that human rights of a child are non-negotiable </h3><br>
         <h4>  We’re a school that believes that it’s more productive for young kids to focus on learning, developing skills, having fun playing sports, etc.
           than short-term results on a scoreboard. </h4>
@@ -328,7 +328,7 @@
   <! Container (Services Section) -->
          <div id="activities" class="container-fluid text-center">
     <h2>Activities</h2>
-    <h4>We offer</h4>
+    <h3>We offer</h3>
     <br>
     <div class="row slideanim">
       <div class="col-sm-4">
@@ -440,7 +440,9 @@
       <p>Contact us and we'll get back to you within 24 hours.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span> 89, K.K Nagar, Near Piyau,Sikandra,Agra-282007</p>
       <p><span class="glyphicon glyphicon-phone"></span> 8171008860, 7830263612</p>
-      <p><span class="glyphicon glyphicon-envelope"></span> prashant.sharma@gmail.com</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> <a href="mailto:Chillyfog@gmail.com"> Prashant Sharma</a></p>
+      <a href="https://www.facebook.com/agra282007/" target="_blank"><img class="contact-image" src="https://user-images.githubusercontent.com/27626771/28601780-4ad4072e-7188-11e7-88e9-61885a0b5742.png"alt="facebook">Join Us!!</a>
+
     </div>
     <!-- <div class="col-sm-7 slideanim">
       <div class="row">
