@@ -18,7 +18,7 @@ const signIn = function (data) {
     data
   })
     .then((response) => {
-      console.log("token is", response.user.token)
+      console.log('token is', response.user.token)
       store.userToken = response.user.token
       store.userId = response.user.id
       return store
@@ -91,10 +91,10 @@ const createStudent = function (data) {
     },
     data
   })
-    // .then((response) => {
-    //   store.student = response.student
-    //   return store
-    // })
+    .then((response) => {
+      store.student = response.student
+      return store
+    })
     .then(console.log(data))
 }
 const getAllStudent = function () {
@@ -108,18 +108,13 @@ const getAllStudent = function () {
 }
 const updateStudentInfo = function (id, data) {
   console.log('inside update student function data is--', data, id, store)
-  debugger
   return $.ajax({
     url: config.apiOrigin + '/students/' + id,
     method: 'PATCH',
-    header: {
+    headers: {
       Authorization: 'Token token=' + store.userToken
     },
     data
-  })
-  .then((response) => {
-    console.log(data, id, response.student)
-    $("ul[data-id='" + id + "']").find('.std').text(response.student)
   })
 }
 const deleteStudent = function (data) {

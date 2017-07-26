@@ -1,5 +1,4 @@
 const getFormFields = require('../../../lib/get-form-fields')
-// const removebton = require('../templates/car-listing.handlebars')
 const api = require('./api')
 const ui = require('./ui')
 // const store = require('../store')
@@ -82,7 +81,6 @@ const onUpdateStudent = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   const id = $(event.target).attr('data-id')
-  debugger
   console.log(id, data)
   api.updateStudentInfo(id, data)
   .then(ui.onUpdateStudentSuccess)

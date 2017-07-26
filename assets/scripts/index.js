@@ -20,18 +20,33 @@ $(() => {
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#change-password').hide()
+  $('#cretstnd').hide()
+  $('#crtstudnt').hide()
+  $('#getstudnt').hide()
+  $('#getreq').hide()
+  $('#success').hide()
+  $('#error').hide()
+  $('#changePassword-btn').hide()
+  $('#sign-out-btn').hide()
 })
 
 $('#login-btn').click(function () {
   $('#sign-in').show()
+  $('#sign-up').hide()
+  // $('#change-password').hide()
 })
 $('#sign-up-btn').click(function () {
   $('#sign-up').show()
+  $('#change-password').hide()
+  $('#sign-in').hide()
 })
 $('#changePassword-btn').click(function () {
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#change-password').show()
+})
+$('#cretstnd').click(function () {
+  $('#crtstudnt').show()
 })
 $(() => {
   $('#myBtn').click(function () {
@@ -41,7 +56,7 @@ $(() => {
     // get the ID from the DOM
     const id = $(event.target).parent().attr('data-id')
     console.log(id)
-    const editStudentHtml = editStudentTemplate ({ id: id })
+    const editStudentHtml = editStudentTemplate({ id: id })
 
     $('#edit-student-modal .modal-body').html(editStudentHtml)
     // generate the handlebars templates
@@ -49,4 +64,10 @@ $(() => {
     // add handlebars template to the modal
     $('#edit-student-modal').modal()
   })
+})
+$('.editstud').click(function () {
+
+})
+$('.closestd').click(function () {
+  $('#crtstudnt').hide()
 })
