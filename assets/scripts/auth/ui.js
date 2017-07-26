@@ -1,11 +1,7 @@
 const showRequestTemplate = require('../templates/request.handlebars')
 const showStudentTemplate = require('../templates/student.handlebars')
 const showSingleStudentTemplate = require('../templates/singlestudent.handlebars')
-// const resetForm = function resetForm ($form) {
-//   $form.find('input:text, input:password, input:file, input:email, select, textarea').val('')
-//   $form.find('input:radio, input:checkbox')
-//   .removeAttr('checked').removeAttr('selected')
-// }
+
 const signUpSuccess = (data) => {
   // resetForm($('#sign-up'))
   $('.form-control').val('')
