@@ -32,8 +32,6 @@ const signOutFailure = () => {
 }
 const getAllRequestSuccess = (data) => {
   console.log(data)
-  debugger
-  // $('.request-table').empty()
   const showrequestHtml = showRequestTemplate({ requests: data.requests })
   console.log(showrequestHtml)
   $('#requestadd').append(showrequestHtml)
