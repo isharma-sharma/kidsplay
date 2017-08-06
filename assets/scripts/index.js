@@ -71,3 +71,9 @@ $('.editstud').click(function () {
 $('.closestd').click(function () {
   $('#crtstudnt').hide()
 })
+$('.pull-right').click(function () {
+  $('.form-control').val('')
+})
+$('.send').click(function () {
+  $('.form-control').val('')
+})
