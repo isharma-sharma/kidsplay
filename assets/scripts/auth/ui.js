@@ -75,11 +75,13 @@ const signOutSuccess = () => {
   $('#sign-out-btn').hide()
   $('#login-btn').show()
   $('#student-table').hide()
+  $('#request-table').hide()
 }
 const signOutFailure = () => {
   console.log('signoutfaliue')
   $('.form-control').val('')
 }
+
 const getAllRequestSuccess = (data) => {
   if (data.requests.length === 0) {
     $('.head').hide()
@@ -143,6 +145,7 @@ const deleteStudentSuccess = (event) => {
   console.log('this is event target:', $(event.target))
   $(event.target).parent().parent().remove()
 }
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
